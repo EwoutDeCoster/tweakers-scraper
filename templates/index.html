@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustratie tweakers</title>
+</head>
+<body>
+    <h1>Illustratie Tweakers scraper</h1>
+    <p><b>{{product}}</b></p>
+    <p><b>{{EAN}}</b></p>
+    <form method="post">
+        <label for="url">Productnaam</label>
+        <input type="text" name="product" id="product">
+        <input type="submit" value="Zoek">
+    </form>
+    <div id="result">
+        <!-- tabel van shop en prijs   -->
+        <table style="margin-top: 40px;" id="tabel">
+            <thead>
+                <tr>
+                    <th>Shop</th>
+                    <th>|</th>
+                    <th>Prijs</th>
+                    <th>|</th>
+                    <th>Product pagina</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>{{ item.shop }}</td>
+                    <td>|</td>
+                    <td>€ {{ item.price }}</td>
+                    <td>|</td>
+                    <td><a href="{{ item.url }}" target="_blank">Link</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p><b>{{avg}}</b></p>
+        <p><b>{{med}}</b></p>
+    </div>
+</body>
+</html>
