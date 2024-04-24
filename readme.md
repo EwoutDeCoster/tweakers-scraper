@@ -3,6 +3,9 @@
 ## Overview
 The Tweakers Price Scraper is a sophisticated Python application designed to harvest pricing and specification data for products listed on the popular Dutch tech site, Tweakers.net. By employing this tool, users can effortlessly compare prices and specs from various retailers, making it an indispensable resource for savvy shoppers and professionals alike. The application features a user-friendly web interface powered by Flask, enabling searches directly through a browser.
 
+## Screenshot
+![The image shows the POC of the data extraction](images/Screenshot_1.png "POC of data extraction")
+
 ## Key Features
 - **Effortless Product Searches**: Input a product name to fetch relevant listings.
 - **Comprehensive Price Listings**: View a curated list of retailer prices for your searched product, neatly organized from lowest to highest.

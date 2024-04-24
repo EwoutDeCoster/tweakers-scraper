@@ -28,6 +28,8 @@ def getCookiesFromSite(url: str = None):
         "prefs", {
             # block image loading
             "profile.managed_default_content_settings.images": 2,
+            # block css
+            "profile.managed_default_content_settings.stylesheets": 2,
         }
     )
     options.add_argument("--headless")
